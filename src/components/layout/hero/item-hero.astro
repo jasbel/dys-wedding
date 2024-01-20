@@ -1,0 +1,14 @@
+---
+
+import styles from "./hero.module.scss";
+
+interface Props {
+  urlBg?: string;
+  small?: boolean;
+}
+
+const { urlBg, small } = Astro.props;
+---
+<div class={[styles["item-hero"], small ? styles["item-hero--small"] : undefined]}>
+  <div class={[styles["item-hero__content"], small ? styles["item-hero__content--small"] : undefined]} style={`background-image: url(${urlBg})`}></div>
+</div>

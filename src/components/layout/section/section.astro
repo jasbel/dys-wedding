@@ -1,0 +1,27 @@
+---
+interface Props {
+  id?: string;
+  className?: string;
+  title?: string;
+  noWrap?: boolean;
+}
+
+const {id,className,title,noWrap} = Astro.props
+
+// export default component$(({ id, class: className, title, noWrap = false }: ISectionProps) => {
+---
+
+<section class={'section ' + className} id={id}>
+  {title && (
+    <h3>
+      <slot name="title" />
+    </h3>
+  )}
+  {!noWrap ? (
+    <div class={"container"}>
+      <slot />
+    </div>
+  ) : (
+    <slot />
+  )}
+</section>

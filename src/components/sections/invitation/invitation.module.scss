@@ -1,0 +1,138 @@
+@import "src/styles/shared";
+
+.section {
+  background-color: #ffcdb2;
+  @include r(pt, 50, 162);
+  @include r(pb, 50, 120);
+}
+
+.invitation {
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    @include r(gap, 12, 24);
+    @include mq(flex-direction, column, $md);
+  }
+}
+
+.photoContent {
+  @include r(maxw, 300, 430);
+  @include r(maxh, 320, 494);
+  align-self: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/flower1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 90px;
+    z-index: 0;
+    left: 50%;
+    top: -6px;
+    transform: translate(-38%, -50%);
+  }
+  img {
+    @include mq(h, 0, $md);
+    @include mq(w, 70, $md);
+    @include mq(display, none, $sm);
+    visibility: hidden;
+  }
+}
+
+.item {
+  border: 1px solid #bb9096;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__wrap {
+    // width: 235px;
+    // height: 271px;
+    width: 100%;
+    height: 350px;
+    padding: 12px;
+    background-color: #fedfe3;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/flower-main.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 100%;
+      height: 70px;
+      z-index: 0;
+      left: 50%;
+      top: 1%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--bottom {
+      align-self: flex-end;
+    }
+  }
+  &__title {
+    color: #965a00;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Dancing Script";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 96.5%; /* 25.76px */
+    margin-bottom: 12px;
+  }
+
+  &__content {
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Caladea;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__icon {
+    margin-right: 6px;
+  }
+
+  &__btn {
+    // width: 174.253px;
+    // height: 23.728px;
+    padding:6px 20px;
+    flex-shrink: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.386px;
+    text-transform: uppercase;
+    background-color: #b95c50;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

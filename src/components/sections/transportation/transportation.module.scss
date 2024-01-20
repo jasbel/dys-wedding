@@ -1,0 +1,85 @@
+@import "src/styles/shared";
+
+.section {
+  background-color: #fdfdfd;
+  @include r(pt, 50, 81);
+  @include r(pb, 50, 81);
+}
+
+.header {
+  max-width: 570.216px;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+.title {
+  color: #19381f;
+  text-align: center;
+  font-family: ABeeZee;
+  @include r(fz, 37, 59);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.description {
+  color: #19381f;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.items-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  overflow-x: scroll;
+
+  @include mq(flex-direction, column, $sm);
+  @include mq(overflow-x, auto, $sm);
+}
+
+.item {
+  color: #19381f;
+  @include r(w, 180, 211);
+  @include r(mh, 220, 350);
+  @include mq(w, 100%, $sm);
+  @include mq(mh, auto, $sm);
+
+  border-radius: 50px;
+  padding: 12px;
+  border: 1px solid #19381f;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  @include mq(pt, 12px, $sm);
+
+  background-color: #00000011;
+  font-weight: bold;
+
+
+  &__title {
+    color: #19381f;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #19381f;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: bold;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
