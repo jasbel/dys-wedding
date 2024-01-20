@@ -7,13 +7,13 @@ import styles from "./transportation.module.scss";
 ---
 <Section id="transportation" className={['relative',styles.section].join(' ')}>
   <div class={styles.header}>
-    <h2 class={styles.title}>
+    <h2 class={styles.title} data-aos="zoom-in-down">
       {/* <Slot name="title" /> */}
       Transporte
     </h2>
-    <p class={styles.description}>
+    <p data-aos="fade-right" class={styles.description}>
     <!-- Dejamos a tu disposición numerosas líneas de transporte que te acercan directamente al lugar del evento, proporcionándote así información detallada para tu conveniencia. -->
-    Te proporcionamos diversas opciones de transporte directo al evento para tu conveniencia.
+    Algunas opciones de transporte directo al evento para tu conveniencia.
     </p>
   </div>
   <div class={styles["items-container"]}>
@@ -29,6 +29,6 @@ import styles from "./transportation.module.scss";
     />
     <ItemTransportation icon="taxi" title="Radio Movil" description={["Existen algunas que tienen su central en nuestra zona", "Remix, Oruro"]} />
   </div>
-  <PrevNext prev="#invitation" next="#timer" />
+  <PrevNext prev="#invitation" next="#end" />
 
 </Section>

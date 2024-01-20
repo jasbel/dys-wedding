@@ -2,11 +2,12 @@
 interface Props {
   id?: string;
   className?: string;
+  classContainer?: string;
   title?: string;
   noWrap?: boolean;
 }
 
-const {id,className,title,noWrap} = Astro.props
+const {id,className,title,noWrap, classContainer = ''} = Astro.props
 
 // export default component$(({ id, class: className, title, noWrap = false }: ISectionProps) => {
 ---
@@ -18,10 +19,17 @@ const {id,className,title,noWrap} = Astro.props
     </h3>
   )}
   {!noWrap ? (
-    <div class={"container"}>
+    <div class={["container", classContainer].join(' ')}>
       <slot />
     </div>
   ) : (
     <slot />
   )}
 </section>
+
+<style>
+  #timer {
+      display: none;
+  }
+</style>
+

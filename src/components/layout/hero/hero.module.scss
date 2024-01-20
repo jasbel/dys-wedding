@@ -1,9 +1,9 @@
 @import "src/styles/shared";
 
 .hero {
-  @if($isVideo) {
-    @extend .full-height;
-    @extend .full-width;
+  @media screen and (max-width: $phone) {
+    @include full-height;
+    @include full-width;
   }
   display: flex;
   vertical-align: middle;
@@ -46,7 +46,7 @@
 
 .box {
   // position: absolute;
-  @include padding-responsive(30, 18, 60, 12);
+  @include padding-responsive(30, 25, 60, 18);
   @include r("br", 12, 30);
   display: flex;
   flex-direction: column;
@@ -54,6 +54,8 @@
   align-items: center;
   gap: 8px;
   background-color: #fff7;
+  @include mq(mr, 2.5rem, $sm);
+  @include mq(ml, 2.5rem, $sm);
 
   &__description {
     font-family: "Montaga";
@@ -65,16 +67,19 @@
     color: #2b1105;
     opacity: 0.8;
     margin: 0;
+    margin-bottom: 12px;
+    @if($isVideo) {
+      padding: 0 12px;
+    }
   }
 
   &__title {
-    font-family: "Montaga";
-    font-style: normal;
+    // font-style: normal;
     font-weight: 400;
     line-height: 100%;
 
     color: #c6754d;
-    @include r(fz, 40, 75);
+    @include r(fz, 50, 75);
   }
 
   &__btn {
@@ -89,6 +94,8 @@
     font-weight: bold;
     padding: 6px;
     padding-bottom: 8px;
+    margin-bottom: 1rem;
+    display: inline-block;
 
     color: #19381f;
   }
@@ -99,16 +106,16 @@
   &--right {
     margin-top: -30px;
     position: absolute;
+    @include r(b, -50, 24);
+    @include mq(b, 1rem, $sm);
   }
   &--left {
-    @include r(b, -50, 24);
     @include r(l, 15, 120);
   }
   &--center {
     z-index: 10;
   }
   &--right {
-    @include r(b, -50, 24);
     @include r(r, 15, 120);
   }
 
@@ -120,6 +127,10 @@
 
     @include r(h, 75, 300);
     @include mq("justify-content", center, $md);
+
+    @if($isVideo) {
+      display: none;
+    }
   }
 }
 

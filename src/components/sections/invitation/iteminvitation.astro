@@ -23,7 +23,7 @@ btnUrl,
 position } = Astro.props;
 
 ---
-<div class={[styles.item__wrap, position==="bottom" ? styles["item__wrap--bottom"] : ''].join(' ')} style={`background-image: url(images/flower-main.png)`}>
+<div data-aos="zoom-in" class={[styles.item__wrap, position==="bottom" ? styles["item__wrap--bottom"] : ''].join(' ')} style={`background-image: url(images/flower-main.png)`}>
   <div class={styles.item}>
     <div style={{marginBottom: '6px'}}>
       <img src={"./images/"+icon} />

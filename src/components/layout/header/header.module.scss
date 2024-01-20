@@ -1,9 +1,10 @@
 @import "src/styles/shared";
 
 .header {
-  @if($isVideo) {
-    @extend .full-height;
-    @extend .full-width;
+  @media screen and (max-width: $phone) {
+      @include full-height;
+      @include full-width;
+      background-color: rgb(250, 253, 250);
   }
 
   padding: 1rem 1rem;
@@ -17,6 +18,10 @@
     &.logo {
       @include mq(margin-top, 1.5rem, $md);
       @include mq(margin-bottom, 1.5rem, $md);
+
+      @media screen and (max-width: $phone) {
+        transform: scale(1.5);
+      }
       
     }
     &:not(.logo) {

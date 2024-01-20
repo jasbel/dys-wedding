@@ -10,7 +10,9 @@ interface Props {
 
 <!-- <audio id="audioPlayer" src="./audio/music.mpeg"></audio> -->
 
-<style>
+<style lang="scss">
+	@import "src/styles/shared";
+
 	#whatsapp {
 		/* color: rgb(53, 39, 132); */
 		background-color: #fafffb;
@@ -25,5 +27,9 @@ interface Props {
 		bottom: 15px;
 		left: 15px;
 		border-radius: 50px;
+
+		@if($isVideo) {
+			display: none;
+		}
 	}
 </style>

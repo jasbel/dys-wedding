@@ -71,6 +71,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-bottom: 12px;
   }
 
   &__description {
@@ -81,5 +82,7 @@
     font-style: bold;
     font-weight: 400;
     line-height: normal;
+    margin-top: 0;
+    margin-bottom: 12px;
   }
 }
