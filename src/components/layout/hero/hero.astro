@@ -2,11 +2,12 @@
 import ItemHero from "./item-hero.astro";
 
 import styles from "./hero.module.scss";
+import PrevNext from "../../PrevNext.astro";
 
 const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Asbel%20y%20Loida&dates=20240127T190000Z/20240128T000000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/YDCur2fUJ2B9qLn9A';
 
 ---
-<div class={["container", styles.hero].join(' ')}>
+<div id="hero" class={["relative full-width", "container", styles.hero].join(' ')}>
   <div class={styles.box}>
     <p class={styles.box__description}>Celebrando nuestro dia mas especial</p>
     <h2 class={styles.box__title}>Asbel & Loida</h2>
@@ -24,4 +25,7 @@ const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20A
       <ItemHero urlBg="./images/photo3.png" small />
     </div>
   </div>
+  
+  <PrevNext prev="#header" next="#invitation"  />
+  
 </div>

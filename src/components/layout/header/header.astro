@@ -1,10 +1,11 @@
 ---
+import PrevNext from "../../PrevNext.astro";
 import WeddingLogo from "../../icons/wedding-logo.astro";
 
 import styles from "./header.module.scss";
 
 ---
-<header class={styles.header}>
+<header id="header" class={['relative' ,styles.header].join(' ')}>
   <div class={styles.wrapper}>
     <ul class={styles.content}>
       <li class={styles.item}>
@@ -56,4 +57,6 @@ import styles from "./header.module.scss";
       </li>
     </ul>
   </div>
+
+  <PrevNext prev="#" next="#hero"/>
 </header>

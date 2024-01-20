@@ -1,17 +1,19 @@
 ---
 import Section from "../../../../src/components/layout/section/section.astro";
+import PrevNext from "../../PrevNext.astro";
 import ItemTransportation from "./item-transportation.astro";
 
 import styles from "./transportation.module.scss";
 ---
-<Section id="transportation" className={styles.section}>
+<Section id="transportation" className={['relative',styles.section].join(' ')}>
   <div class={styles.header}>
     <h2 class={styles.title}>
       {/* <Slot name="title" /> */}
       Transporte
     </h2>
     <p class={styles.description}>
-    Dejamos a tu disposición numerosas líneas de transporte que te acercan directamente al lugar del evento, proporcionándote así información detallada para tu conveniencia.
+    <!-- Dejamos a tu disposición numerosas líneas de transporte que te acercan directamente al lugar del evento, proporcionándote así información detallada para tu conveniencia. -->
+    Te proporcionamos diversas opciones de transporte directo al evento para tu conveniencia.
     </p>
   </div>
   <div class={styles["items-container"]}>
@@ -27,4 +29,6 @@ import styles from "./transportation.module.scss";
     />
     <ItemTransportation icon="taxi" title="Radio Movil" description={["Existen algunas que tienen su central en nuestra zona", "Remix, Oruro"]} />
   </div>
+  <PrevNext prev="#invitation" next="#timer" />
+
 </Section>

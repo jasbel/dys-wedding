@@ -3,10 +3,11 @@ import ItemInvitation from "./iteminvitation.astro";
 import styles from "./invitation.module.scss";
 
 import Section from "../../layout/section/section.astro";
+import PrevNext from "../../PrevNext.astro";
 
 ---
-<Section className={styles.section} id="invitation">
-  <div class={styles.invitation__wrap}>
+<Section className={[styles.section, 'relative'].join(' ')} id="invitation">
+  <div id="invitation" class={[styles.invitation__wrap].join(' ')}>
     <ItemInvitation
       title="Ceremonia"
       date="Sabado, Enero 27 2024"
@@ -30,4 +31,5 @@ import Section from "../../layout/section/section.astro";
       btnUrl="https://maps.app.goo.gl/YDCur2fUJ2B9qLn9A "
     />
   </div>
+  <PrevNext prev="#hero" next="#transportation" />
 </Section>

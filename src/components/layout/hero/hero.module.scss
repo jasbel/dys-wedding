@@ -1,6 +1,10 @@
 @import "src/styles/shared";
 
 .hero {
+  @if($isVideo) {
+    @extend .full-height;
+    @extend .full-width;
+  }
   display: flex;
   vertical-align: middle;
   flex-direction: column;
@@ -121,6 +125,10 @@
 
 .item-hero {
   position: relative;
+
+  @if($isVideo){
+    @include mq(display, none, $sm);
+  }
 
   &::before {
     content: "";

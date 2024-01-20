@@ -3,11 +3,12 @@ import styles from "./timer.module.scss";
 
 import Section from "../../../../src/components/layout/section/section.astro";
 import Counter from "./counter.astro";
+import PrevNext from "../../PrevNext.astro";
 
 const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Asbel%20y%20Loida&dates=20240127T190000Z/20240128T000000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/YDCur2fUJ2B9qLn9A';
 
 ---
-<Section id="timer" className={styles.section}>
+<Section id="timer" className={[styles.section, 'relative full-width'].join(' ')}>
   <div class={styles.box}>
   <div class={styles['box-content']}>
     <h3 class={styles.title}>Cuanto falta para la boda</h3>
@@ -17,4 +18,6 @@ const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20A
     <a class={styles.button} target="_blank" href={url} >Agregar a Calendario</a>
   </div>
   </div>
+  <PrevNext prev="#transportation" next="#" />
+
 </Section>

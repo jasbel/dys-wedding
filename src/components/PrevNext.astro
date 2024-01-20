@@ -1,0 +1,48 @@
+---
+interface Props {
+  next: string;
+  prev: string;
+}
+
+const {next, prev} = Astro.props;
+---
+<div class="prevnext prev-container">
+  <a href={prev}> 
+    <img src="./icons/prev.svg" alt="prev">
+  </a>
+</div>
+<div class="prevnext next-container">
+  <a href={next}> 
+    <img src="./icons/next.svg" alt="next">
+    </a>
+</div>
+
+<style>
+  .prevnext {
+    position: absolute;
+    background-color: #f5f4fd55;
+    padding: 6px;
+    top: 50%;
+    border-radius: 50px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    padding: 10px;
+    a {
+      color: rgb(28, 34, 131);
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .prev-container {
+    left: 0.2rem;
+  }
+
+  .next-container {
+    right: 0.2rem;
+  }
+</style>

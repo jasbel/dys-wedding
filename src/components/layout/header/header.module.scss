@@ -1,6 +1,11 @@
 @import "src/styles/shared";
 
 .header {
+  @if($isVideo) {
+    @extend .full-height;
+    @extend .full-width;
+  }
+
   padding: 1rem 1rem;
   li {
     display: inline-block;
