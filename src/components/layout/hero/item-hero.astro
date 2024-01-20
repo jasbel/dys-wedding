@@ -9,6 +9,6 @@ interface Props {
 
 const { urlBg, small } = Astro.props;
 ---
-<div class={[styles["item-hero"], small ? styles["item-hero--small"] : undefined]}>
-  <div class={[styles["item-hero__content"], small ? styles["item-hero__content--small"] : undefined]} style={`background-image: url(${urlBg})`}></div>
+<div class={[styles["item-hero"], small ? styles["item-hero--small"] : ''].join(' ')}>
+  <div class={[styles["item-hero__content"], small ? styles["item-hero__content--small"] : ''].join(' ')} style={`background-image: url(${urlBg})`}></div>
 </div>

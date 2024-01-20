@@ -11,7 +11,7 @@ interface Props {
 
 const { title = "", icon, description = [] } = Astro.props
 ---
-    <div class={[styles.item__wrap]}>
+    <div class={[styles.item__wrap].join(' ')}>
       <div class={styles.item}>
         <div style={{ marginBottom: "6px" }}>
           {icon === "taxi" && (
@@ -33,7 +33,7 @@ const { title = "", icon, description = [] } = Astro.props
         <h2 class={styles.item__title}>{title}</h2>
 
         {description.map((d, i) => (
-          <p class={styles.item__description} key={i}>{d}</p>
+          <p class={styles.item__description}>{d}</p>
         ))}
       </div>
     </div>
