@@ -32,9 +32,8 @@
 
 html {
   line-height: 1;
-  @if($isVideo) {font-size: 17px;
-  }
-  font-size: 17px;
+  font-size: 18px;
+  
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;

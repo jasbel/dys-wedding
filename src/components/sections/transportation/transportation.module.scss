@@ -39,7 +39,7 @@
   overflow-x: scroll;
 
   @include mq(flex-direction, column, $sm);
-  @include mq(overflow-x, auto, $sm);
+  @include mq(overflow-x, visible, $sm);
 }
 
 .item {
