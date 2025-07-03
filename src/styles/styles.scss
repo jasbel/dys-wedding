@@ -219,8 +219,10 @@ main {
 
 .section {
   @media (max-width: $phone) {
-    @include full-height();
-    max-height: 100vh;
+    // @include full-height();
+    min-height: auto;
+    height: calc(100vh - 20px);
+    overflow-y: visible;
 
     @if($isVideo) {
       padding-top: 30px;

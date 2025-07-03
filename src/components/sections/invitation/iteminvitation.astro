@@ -11,6 +11,7 @@ interface Props {
   icon?: string;
   btnTitle?: string;
   btnUrl?: string;
+  qr?: string;
   position?: "bottom";
 }
 
@@ -22,6 +23,7 @@ other,
 icon,
 btnTitle,
 btnUrl,
+qr,
 position } = Astro.props;
 
 ---
@@ -60,4 +62,9 @@ position } = Astro.props;
     </a>
   </div>
 </div>
-  
+
+{qr &&
+  <div class={styles.qr}>
+  <img src={"./images/"+qr} />
+  </div>
+}
