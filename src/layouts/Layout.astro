@@ -4,20 +4,38 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const description =
+	"Acompáñanos a celebrar el día más especial de nuestras vidas. ¡Estás cordialmente invitado a nuestra boda!";
+const url = "https://boda-dixon-shirlen.asbel.dev/";
+const image = "https://boda-dixon-shirlen.asbel.dev/images/preview.jpg";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Bienvenido a nuestro portal, te invitamos a nuestra boda" />
+		<meta
+			name="description"
+			content="Bienvenido a nuestro portal, te invitamos a nuestra boda"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital@1&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={url} />
+		<meta property="og:type" content="website" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital@1&family=Quicksand:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<slot />

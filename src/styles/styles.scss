@@ -191,7 +191,7 @@ main {
   max-width: 600px;
   @media (max-width: $phone) {
     @include full-height();
-    background-color: #f3fff5;
+    // background-color: #f3fff5;
     display: flex;
     justify-content: space-between;
     align-items: center;

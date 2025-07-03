@@ -7,6 +7,7 @@ interface Props {
   date?: string;
   hour?: string;
   direction?: string;
+  other?: string;
   icon?: string;
   btnTitle?: string;
   btnUrl?: string;
@@ -17,13 +18,14 @@ const { title,
 date,
 hour,
 direction,
+other,
 icon,
 btnTitle,
 btnUrl,
 position } = Astro.props;
 
 ---
-<div data-aos="zoom-in" class={[styles.item__wrap, position==="bottom" ? styles["item__wrap--bottom"] : ''].join(' ')} style={`background-image: url(images/flower-main.png)`}>
+<div data-aos="zoom-in" class={[styles.item__wrap, position==="bottom" ? styles["item__wrap--bottom"] : ''].join(' ')} >
   <div class={styles.item}>
     <div style={{marginBottom: '6px'}}>
       <img src={"./images/"+icon} />
@@ -47,6 +49,10 @@ position } = Astro.props;
           <i class="fa-solid fa-location-dot"></i>
         </span>
         <span>{direction}</span>
+        <br>
+        <br>
+        <span>{other}</span>
+        <br>
       </p>
     </div>
     <a href={btnUrl} target="_blank" class={styles.item__btn} title={btnTitle}>
