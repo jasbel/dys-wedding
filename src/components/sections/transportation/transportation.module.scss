@@ -36,7 +36,8 @@
   display: flex;
   gap: 25px;
   justify-content: center;
-  overflow-x: scroll;
+  flex-direction: column;
+  overflow-x: visible;
 
   @include mq(flex-direction, column, $sm);
   @include mq(overflow-x, visible, $sm);
@@ -44,10 +45,10 @@
 
 .item {
   color: #19381f;
-  @include r(w, 180, 211);
   @include r(mh, 220, 350);
   @include mq(w, 100%, $sm);
   @include mq(mh, auto, $sm);
+  width: 100%;
 
   border-radius: 50px;
   padding: 12px;

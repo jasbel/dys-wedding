@@ -4,6 +4,10 @@
   background-color: #ffcdb2;
   @include r(pt, 50, 162);
   @include r(pb, 50, 120);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .invitation {

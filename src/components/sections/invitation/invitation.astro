@@ -7,7 +7,7 @@ import PrevNext from "../../PrevNext.astro";
 
 ---
 <Section className={[styles.section, 'relative'].join(' ')} id="invitation">
-  <div  id="invitation" class={[styles.invitation__wrap].join(' ')}>
+  <div class={[styles.invitation__wrap].join(' ')}>
     <ItemInvitation
       title="Ceremonia Religiosa"
       date="Fecha: Sabado, Enero 27, 2024"
@@ -17,9 +17,16 @@ import PrevNext from "../../PrevNext.astro";
       btnTitle="Abrir Mapa"
       btnUrl="https://maps.app.goo.gl/UPYfG2c4rgE3wSPR7"
     />
-    <figure class={styles.photoContent}>
+  </div>
+  <PrevNext prev="#agree" next="#invitation-event" />
+</Section>
+
+<Section className={[styles.section, 'relative'].join(' ')} id="invitation-event">
+  <div class={[styles.invitation__wrap].join(' ')}>
+
+    <!-- <figure class={styles.photoContent}>
       <img src="./images/photo-rectangle.png" />
-    </figure>
+    </figure> -->
     <ItemInvitation
       title="Recepcion Social"
       date="Fecha: Sabado, Enero 27, 2024"
@@ -31,5 +38,5 @@ import PrevNext from "../../PrevNext.astro";
       btnUrl="https://maps.app.goo.gl/YDCur2fUJ2B9qLn9A "
     />
   </div>
-  <PrevNext prev="#agree" next="#transportation" />
+  <PrevNext prev="#invitation" next="#transportation" />
 </Section>

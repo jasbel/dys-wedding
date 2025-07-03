@@ -180,9 +180,15 @@ figure {
 img {
   width: 100%;
 }
-
+main {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  background: white;
+}
 
 .first-window {
+  max-width: 600px;
   @media (max-width: $phone) {
     @include full-height();
     background-color: #f3fff5;
@@ -192,14 +198,21 @@ img {
     flex-direction: column;
 
 
-    & > * {
+    & > div, & > header {
       flex: 1;
 
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       display: flex;
 
       max-width: none;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+
+    }
+    & > header {
+      justify-content: center;
     }
   }
 }
@@ -207,6 +220,7 @@ img {
 .section {
   @media (max-width: $phone) {
     @include full-height();
+    max-height: 100vh;
 
     @if($isVideo) {
       padding-top: 30px;
