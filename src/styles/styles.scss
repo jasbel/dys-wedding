@@ -236,3 +236,10 @@ main {
   }
   
 }
+
+#playButton,
+.prevnext {
+  @if($isVideo) {
+    opacity: 0.05 !important;
+  }
+}
