@@ -44,7 +44,6 @@
     left: 50%;
     top: -6px;
     transform: translate(-38%, -50%);
-   
   }
   img {
     @include mq(h, 0, $md);
@@ -78,9 +77,8 @@
     position: relative;
     margin-top: 24px;
     margin-bottom: 24px;
-    @if($isVideo) {
+    @if ($isVideo) {
       background-size: 8rem;
-    
     }
     @include mq(mt, 0.5rem, $sm);
     @include mq(mb, 15, $sm);
@@ -125,7 +123,7 @@
   &__content {
     text-align: left;
     margin-bottom: 12px;
-    
+
     @media screen and (max-width: $phone) {
       margin-bottom: 0;
     }
@@ -140,16 +138,16 @@
     line-height: normal;
 
     @media screen and (max-width: $phone) {
-        @include mq(mt, 0.7rem, $sm);
-        @include mq(mb, 0.7rem, $sm);
-        @include mq(pl, 0.7rem, $sm);
-        @include mq(pr, 0.2rem, $sm);
+      @include mq(mt, 0.7rem, $sm);
+      @include mq(mb, 0.7rem, $sm);
+      @include mq(pl, 0.7rem, $sm);
+      @include mq(pr, 0.2rem, $sm);
     }
   }
-  
+
   &__icon {
     margin-right: 6px;
-    @if($isVideo) {
+    @if ($isVideo) {
       @include mq(mr, 0, $sm);
     }
   }
@@ -157,7 +155,7 @@
   &__btn {
     // width: 174.253px;
     // height: 23.728px;
-    padding:6px 20px;
+    padding: 6px 20px;
     flex-shrink: 0;
     color: #fff;
     text-align: center;
@@ -174,8 +172,23 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
-    @if($isVideo) {
-      @include mq(display, none, $sm)
+    @if ($isVideo) {
+      @include mq(display, none, $sm);
     }
+  }
+}
+
+.qr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @if($isVideo) {
+    display: none;
   }
 }

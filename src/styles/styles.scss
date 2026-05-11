@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: var(--qwik-dark-background);
+  background: var(--qwik-dark-blue);
   color: var(--qwik-dark-text);
   overflow-x: hidden;
   font-size: 17px;
@@ -219,8 +219,10 @@ main {
 
 .section {
   @media (max-width: $phone) {
-    @include full-height();
-    max-height: 100vh;
+    // @include full-height();
+    min-height: auto;
+    height: calc(100vh - 20px);
+    overflow-y: visible;
 
     @if($isVideo) {
       padding-top: 30px;
@@ -233,4 +235,11 @@ main {
 
   }
   
+}
+
+#playButton,
+.prevnext {
+  @if($isVideo) {
+    opacity: 0.05 !important;
+  }
 }
