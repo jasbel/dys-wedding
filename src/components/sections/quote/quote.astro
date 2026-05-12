@@ -1,0 +1,43 @@
+---
+import Section from "../../layout/section/section.astro";
+import PrevNext from "../../PrevNext.astro";
+---
+
+<Section className={["section section-center", "relative"].join(" ")} id="quote">
+    <div data-aos="flip-up">
+        <div class="box">
+            <p class="quote">
+                "La medida del amor es amar sin medida."
+            </p>
+            <p class="author">– Agustín de Hipona</p>
+        </div>
+
+    </div>
+
+    <PrevNext prev="#transportation" next="#end" />
+</Section>
+
+<style>
+    .box {
+        background-color: white;
+        padding: 28px 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        font-family: 'Dancing Script', cursive !important;
+    }
+
+    .author {
+        font-size: 1.1rem;
+        color: #7f5e42;
+        margin-top: 12px;
+        font-family: 'Playfair Display', cursive !important;
+    }
+</style>

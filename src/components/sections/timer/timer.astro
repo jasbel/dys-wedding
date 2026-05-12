@@ -1,11 +1,11 @@
 ---
 import styles from "./timer.module.scss";
 
-import Section from "../../../../src/components/layout/section/section.astro";
+import Section from "../../layout/section/section.astro";
 import Counter from "./counter.astro";
 import PrevNext from "../../PrevNext.astro";
 
-const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Asbel%20y%20Loida&dates=20240127T190000Z/20240128T000000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/YDCur2fUJ2B9qLn9A';
+const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Christian%20y%20Melandia&dates=20260703T170000Z/20260703T200000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/CxAHaE9Hr17aiPit9';
 
 ---
 <Section id="timer" className={[styles.section, 'relative full-width'].join(' ')}>
@@ -18,6 +18,6 @@ const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20A
     <a class={styles.button} target="_blank" href={url} >Agregar a Calendario</a>
   </div>
   </div>
-  <PrevNext prev="#transportation" next="#" />
+  <PrevNext prev="#quote" next="#" />
 
 </Section>

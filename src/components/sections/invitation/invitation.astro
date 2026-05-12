@@ -6,40 +6,40 @@ import Section from "../../layout/section/section.astro";
 import PrevNext from "../../PrevNext.astro";
 
 ---
-<Section className={[styles.section, 'relative'].join(' ')} id="invitation">
+<Section className={[styles.section, 'relative'].join(' ')} id=”invitation”>
   <div class={[styles.invitation__wrap].join(' ')}>
     <ItemInvitation
-      title="Ceremonia Religiosa"
-      date="Fecha: Sábado, Julio 19, 2025"
-      hour="Hora: 15:00"
-      direction="Iglesia Bíblica Bet-el / Z. Villa Alto Pagador/ Otb Siglo XXI, 2 cuadras al norte del Col. Ayni Pacha"
-      other="Transporte: R,T,136",
-      icon="rings.png"
-      btnTitle="Abrir Mapa"
-      btnUrl="https://maps.app.goo.gl/aiodRGV8qfdC5W3m8",
-      qr="church-qr.jpg"
+      title=”Ceremonia Religiosa”
+      date=”Fecha: Viernes, Julio 03, 2026”
+      hour=”Hora: 17:00”
+      direction=”Iglesia Bíblica Monte de Sion / Calle Tomás Baldivieso entre Sebastián de Castrilla y Polo de Ondegardo”
+      other=”Transporte: 27, 01, C”,
+      icon=”rings.png”
+      btnTitle=”Ver ubicación”
+      btnUrl=”https://maps.app.goo.gl/CxAHaE9Hr17aiPit9”,
+      qr=”church-qr.jpg”
     />
   </div>
-  <PrevNext prev="#agree" next="#invitation-event" />
+  <PrevNext prev=”#agree” next=”#invitation-event” />
 </Section>
 
-<Section className={[styles.section, 'relative'].join(' ')} id="invitation-event">
+<Section className={[styles.section, 'relative'].join(' ')} id=”invitation-event”>
   <div class={[styles.invitation__wrap].join(' ')}>
 
     <!-- <figure class={styles.photoContent}>
-      <img src="./images/photo-rectangle.png" />
+      <img src=”./images/photo-rectangle.png” />
     </figure> -->
     <ItemInvitation
-      title="Recepcion Social"
-      date="Fecha: Sábado, Julio 19, 2025"
-      hour="Hora: 18:00"
-      direction="Salón de Eventos “MI FORTALEZA” Ubicada en la Avenida Siglo XX, a tres cuadras al sur del surtidor E.S. Vargas de la Riva"
-      icon="coups.png"
-      btnTitle="Ver Direccion"
-      position="bottom"
-      btnUrl="https://maps.app.goo.gl/SMZ9bXE7DrdbGg4B6",
-      qr="event-qr.jpg"
+      title=”Recepción Social”
+      date=”Fecha: Viernes, Julio 03, 2026”
+      hour=”Hora: 19:30”
+      direction=”Salón de Eventos “MI FORTALEZA” Ubicada en la Avenida Siglo XX, a tres cuadras al sur del surtidor E.S. Vargas de la Riva”
+      icon=”coups.png”
+      btnTitle=”Ver ubicación”
+      position=”bottom”
+      btnUrl=”https://maps.app.goo.gl/TcHYqMNz1wutCNx6A”,
+      qr=”event-qr.jpg”
     />
   </div>
-  <PrevNext prev="#invitation" next="#transportation" />
+  <PrevNext prev=”#invitation” next=”#quote” />
 </Section>
