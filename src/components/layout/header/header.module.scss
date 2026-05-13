@@ -7,7 +7,8 @@
       background-color: rgb(250, 253, 250);
   }
   .logopng {
-    max-width: 45vw;
+    width: 100%;
+    max-width:70vw;
   }
 
   padding: 1rem 1rem;
@@ -58,6 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .logo {
