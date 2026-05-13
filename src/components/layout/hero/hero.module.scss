@@ -190,6 +190,8 @@
     @include r(h, 350, 585);
 
     &--small {
+      // text-align: center;
+      background-position: center;
       width: 200px;
       height: 318px;
       @include r(w, 80, 200);
