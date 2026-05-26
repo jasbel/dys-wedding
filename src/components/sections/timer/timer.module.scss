@@ -7,6 +7,7 @@
 
   // Apply section-center utility pattern for consistent centering
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -72,11 +73,9 @@
     padding-top: 24px;
     margin-bottom: 48px;
 
-    // Enhanced mobile responsiveness for counter items
-    @include mq(flex-direction, column, $phone);
-    @include mq(align-items, center, $phone);
+    // Better mobile spacing while maintaining horizontal layout
+    @include mq(gap, 8px, $phone);
     @include mq(justify-content, center, $phone);
-    @include mq(gap, 16px, $phone);
   }
   &__value {
     margin: 0;
