@@ -4,10 +4,15 @@
   background-color: #aed9e0;
   @include r(pt, 50, 100);
   @include r(pb, 50, 100);
+
+  // Apply section-center utility pattern for consistent centering
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
-  background-color: #aeaeae;
+  background-color: rgb(136, 58, 234);
   text-align: center;
   max-width: 600px;
   margin-left: auto;
@@ -16,11 +21,29 @@
   color: white;
   border: 2px solid white;
   @include padding-responsive(24, 24, 24, 16);
+
+  // Enhanced mobile centering using flexbox
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(max-width, 100%, $phone);
 }
 
 .box-content {
   max-width: 400px;
   margin: auto;
+
+  // Ensure proper centering and width on mobile
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(max-width, 100%, $phone);
+  @include mq(margin-left, auto, $phone);
+  @include mq(margin-right, auto, $phone);
 }
 
 .title {
@@ -36,6 +59,7 @@
   color: black;
   border-radius: 100px;
   padding: 8px 12px;
+  font-family: 'Dancing Script', cursive !important;
 }
 
 .counter {
@@ -47,6 +71,12 @@
     justify-content: space-between;
     padding-top: 24px;
     margin-bottom: 48px;
+
+    // Enhanced mobile responsiveness for counter items
+    @include mq(flex-direction, column, $phone);
+    @include mq(align-items, center, $phone);
+    @include mq(justify-content, center, $phone);
+    @include mq(gap, 16px, $phone);
   }
   &__value {
     margin: 0;
