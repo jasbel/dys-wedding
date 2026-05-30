@@ -4,20 +4,20 @@ import styles from "./timer.module.scss";
 import Section from "../../layout/section/section.astro";
 import Counter from "./counter.astro";
 import PrevNext from "../../PrevNext.astro";
+import weddingData from "../../../data/wedding-data.ts";
 
-const url = 'https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Christian%20y%20Melandia&dates=20260703T170000Z/20260703T200000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/CxAHaE9Hr17aiPit9';
+const { timer, wedding } = weddingData;
 
 ---
-<Section id="timer" className={[styles.section, 'relative full-width'].join(' ')}>
+<Section id="timer" className={styles.section}>
   <div class={styles.box}>
   <div class={styles['box-content']}>
-    <h3 class={styles.title}>Cuanto falta para la boda</h3>
-    
-    <Counter/>
-    {/* <button class={styles.button} onClick$={openCalendar}>Agregar a Calendario</button> */}
-    <a class={styles.button} target="_blank" href={url} >Agregar a Calendario</a>
+    <h3 class={styles.title}>{timer.title}</h3>
+
+    <Counter weddingDate={wedding.date}/>
+    <a class={styles.button} target="_blank" href={wedding.calendarUrl}>{timer.buttonText}</a>
   </div>
   </div>
-  <PrevNext prev="#quote" next="#" />
+  <PrevNext prev="#quote" next="#end" />
 
 </Section>

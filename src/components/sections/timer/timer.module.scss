@@ -4,12 +4,11 @@
   // background-color: #aed9e0;
   @include r(pt, 50, 100);
   @include r(pb, 50, 100);
-
-  // Apply section-center utility pattern for consistent centering
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  position: relative;
 }
 
 .box {
@@ -70,7 +69,7 @@
   &__wrap {
     display: flex;
     gap: 12px;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 24px;
     margin-bottom: 48px;
 

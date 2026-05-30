@@ -4,20 +4,25 @@ import styles from "./invitation.module.scss";
 
 import Section from "../../layout/section/section.astro";
 import PrevNext from "../../PrevNext.astro";
+import weddingData from "../../../data/wedding-data.ts";
+
+const { events } = weddingData;
+
+const [ceremonia, recepcion] = events;
 
 ---
 <Section className={[styles.section, 'relative'].join(' ')} id="invitation">
   <div class={[styles.invitation__wrap].join(' ')}>
     <ItemInvitation
-      title="Ceremonia Religiosa"
-      date="Fecha: Viernes, Julio 03, 2026"
-      hour="Hora: 17:00"
-      direction="Iglesia Bíblica Monte de Sion / Calle Tomás Baldivieso entre Sebastián de Castrilla y Polo de Ondegardo"
-      other="Transporte: 27, 01, C",
-      icon="rings.png"
-      btnTitle="Ver ubicación"
-      btnUrl="https://maps.app.goo.gl/CxAHaE9Hr17aiPit9",
-      qr=""
+      title={ceremonia.title}
+      date={ceremonia.date}
+      hour={ceremonia.hour}
+      direction={ceremonia.direction}
+      other={ceremonia.transport}
+      icon={ceremonia.icon}
+      btnTitle={ceremonia.buttonText}
+      btnUrl={ceremonia.mapUrl}
+      qr={ceremonia.qr}
     />
   </div>
   <PrevNext prev="#agree" next="#invitation-event" />
@@ -30,16 +35,16 @@ import PrevNext from "../../PrevNext.astro";
       <img src="./images/photo-rectangle.png" />
     </figure> -->
     <ItemInvitation
-      title="Recepción Social"
-      date="Fecha: Viernes, Julio 03, 2026"
-      hour="Hora: 19:30"
-      direction=`Salón de Eventos 'MI FORTALEZA' Ubicada en la Avenida Siglo XX, a tres cuadras al sur del surtidor E.S. Vargas de la Riva      `
-      icon="coups.png"
-      btnTitle="Ver ubicación"
-      position="bottom"
-      btnUrl="https://maps.app.goo.gl/TcHYqMNz1wutCNx6A",
-      qr=""
-      other="Transporte: 108, 110, 136, 138, P, T."
+      title={recepcion.title}
+      date={recepcion.date}
+      hour={recepcion.hour}
+      direction={recepcion.direction}
+      icon={recepcion.icon}
+      btnTitle={recepcion.buttonText}
+      position={recepcion.position as "bottom"}
+      btnUrl={recepcion.mapUrl}
+      qr={recepcion.qr}
+      other={recepcion.transport}
     />
   </div>
   <PrevNext prev="#invitation" next="#quote" />

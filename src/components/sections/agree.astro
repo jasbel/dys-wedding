@@ -1,13 +1,16 @@
 ---
 import Section from "../layout/section/section.astro";
 import PrevNext from "../PrevNext.astro";
+import weddingData from "../../data/wedding-data.ts";
+
+const { agree } = weddingData;
 ---
 
 <Section className={["section section-center", "relative"].join(" ")} id="agree">
     <div data-aos="flip-up">
         <div class="box">
             <p class="description">
-                Dios, en Su infinita bondad y perfecta soberanía, tuvo a bien concedernos la maravillosa dicha de encontrarnos y descubrir el uno en el otro un amor verdadero, sincero y perdurable. Hoy, con profunda gratitud y gozo en nuestros corazones, celebramos el inicio de una nueva etapa en nuestras vidas, bajo la gracia, la fidelidad y el perfecto propósito del Señor.
+                {agree.description}
             </p>
         </div>
 
@@ -15,12 +18,6 @@ import PrevNext from "../PrevNext.astro";
 
     <PrevNext prev="#hero" next="#invitation" />
 </Section>
-
-<script>
-    /* @ts-ignore */
-  AOS.init();
-</script>
-
 <style>
     .box {
         background-color: white;

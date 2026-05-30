@@ -1,15 +1,18 @@
 ---
 import Section from "../../layout/section/section.astro";
 import PrevNext from "../../PrevNext.astro";
+import weddingData from "../../../data/wedding-data.ts";
+
+const { quote } = weddingData;
 ---
 
 <Section className={["section section-center", "relative"].join(" ")} id="quote">
     <div data-aos="flip-up">
         <div class="box">
             <p class="quote">
-                "La medida del amor es amar sin medida."
+                "{quote.text}"
             </p>
-            <p class="author">– Agustín de Hipona</p>
+            <p class="author">– {quote.author}</p>
         </div>
 
     </div>

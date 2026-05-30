@@ -222,7 +222,7 @@ main {
     // @include full-height();
     // min-height: auto;
     min-height: calc(100vh - 20px);
-    min-height: calc(100dvh - 20px);
+    min-height: calc(100dvh);
     overflow-y: visible;
 
     @if($isVideo) {

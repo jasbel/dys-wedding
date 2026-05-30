@@ -1,0 +1,45 @@
+{
+  "wedding": {
+    "date": "2026-07-03T17:00:00",
+    "calendarUrl": "https://www.google.com/calendar/event?action=TEMPLATE&text=Boda%20Christian%20y%20Melandia&dates=20260703T170000Z/20260703T200000Z&details=Descripci%C3%B3n&location=https://maps.app.goo.gl/CxAHaE9Hr17aiPit9"
+  },
+  "timer": {
+    "title": "Cuanto falta para la boda",
+    "buttonText": "Agregar a Calendario"
+  },
+  "agree": {
+    "description": "Dios, en Su infinita bondad y perfecta soberanía, tuvo a bien concedernos la maravillosa dicha de encontrarnos y descubrir el uno en el otro un amor verdadero, sincero y perdurable. Hoy, con profunda gratitud y gozo en nuestros corazones, celebramos el inicio de una nueva etapa en nuestras vidas, bajo la gracia, la fidelidad y el perfecto propósito del Señor."
+  },
+  "quote": {
+    "text": "La medida del amor es amar sin medida.",
+    "author": "Agustín de Hipona"
+  },
+  "events": [
+    {
+      "id": "ceremonia",
+      "title": "Ceremonia Religiosa",
+      "date": "Fecha: Viernes, Julio 03, 2026",
+      "hour": "Hora: 17:00",
+      "direction": "Iglesia Bíblica Monte de Sion / Calle Tomás Baldivieso entre Sebastián de Castrilla y Polo de Ondegardo",
+      "transport": "Transporte: 27, 01, C",
+      "icon": "rings.png",
+      "buttonText": "Ver ubicación",
+      "mapUrl": "https://maps.app.goo.gl/CxAHaE9Hr17aiPit9",
+      "qr": "",
+      "position": "top"
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción Social",
+      "date": "Fecha: Viernes, Julio 03, 2026",
+      "hour": "Hora: 19:00",
+      "direction": "Salón de Eventos 'MI FORTALEZA' Ubicada en la Avenida Siglo XX, a tres cuadras al sur del surtidor E.S. Vargas de la Riva",
+      "transport": "Transporte: 108, 110, 136, 138, P, T.",
+      "icon": "coups.png",
+      "buttonText": "Ver ubicación",
+      "mapUrl": "https://maps.app.goo.gl/TcHYqMNz1wutCNx6A",
+      "qr": "",
+      "position": "bottom"
+    }
+  ]
+}

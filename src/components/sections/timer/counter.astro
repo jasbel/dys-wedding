@@ -1,6 +1,11 @@
 ---
 import styles from "./timer.module.scss";
 
+interface Props {
+  weddingDate: string;
+}
+
+const { weddingDate } = Astro.props;
 ---
 
 <div class={styles.counter__wrap}>
@@ -22,39 +27,30 @@ import styles from "./timer.module.scss";
   </div>
 </div>
 
-<script>
-  const TargetDate = "2026-07-03T17:00:00";
-
-  let timeLeft = {
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  };
-
-  const calculateTimeLeft = () => {
-    const targetDate = new Date(TargetDate);
+<script define:vars={{ weddingDate }}>
+  console.log(weddingDate)
+  function updateCounter() {
+    const targetDate = new Date(weddingDate);
     const currentDate = new Date();
-    /* @ts-ignore */
     const difference = targetDate - currentDate;
 
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
-    }
-  };
+    const days = Math.max(0, Math.floor(difference / (1000 * 60 * 60 * 24)));
+    const hours = Math.max(0, Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = Math.max(0, Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = Math.max(0, Math.floor((difference % (1000 * 60)) / 1000));
 
-  setInterval(() => {
-    calculateTimeLeft();
-    if (document) {
-      if (document.getElementById("days")) document.getElementById("days")!.innerText = `${timeLeft.days}`;
-      if (document.getElementById("hours")) document.getElementById("hours")!.innerText = `${timeLeft.hours}`;
-      if (document.getElementById("minutes")) document.getElementById("minutes")!.innerText = `${timeLeft.minutes}`;
-      if (document.getElementById("seconds")) document.getElementById("seconds")!.innerText = `${timeLeft.seconds}`;
-    }
-  }, 1000);
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    if (daysEl) daysEl.textContent = days.toString();
+    if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+    if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+    if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+  }
+
+  // Actualizar inmediatamente y luego cada segundo
+  updateCounter();
+  setInterval(updateCounter, 1000);
 </script>
